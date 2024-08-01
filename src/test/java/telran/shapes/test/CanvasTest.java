@@ -10,10 +10,10 @@ import telran.shapes.Shape;
 import telran.shapes.Square;
 
 public class CanvasTest {
+    private Canvas canvas = new Canvas();
     private Shape rectangle = new Rectangle(4, 5);
     private Shape square = new Square(3);
-    private Canvas canvas = new Canvas();
-
+    
     @Test
     void addShapeTest() {
         canvas.addShape(rectangle);
