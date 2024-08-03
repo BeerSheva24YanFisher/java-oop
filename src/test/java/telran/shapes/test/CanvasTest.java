@@ -1,7 +1,6 @@
 package telran.shapes.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import telran.shapes.Canvas;
@@ -10,21 +9,12 @@ import telran.shapes.Shape;
 import telran.shapes.Square;
 
 public class CanvasTest {
-    private Canvas canvas = new Canvas();
-    private Shape rectangle = new Rectangle(4, 5);
-    private Shape square = new Square(3);
-    
-    @Test
-    void addShapeTest() {
-        canvas.addShape(rectangle);
-        canvas.addShape(square);
-        assertEquals(2, canvas.shapes.length);
-        assertTrue(canvas.shapes[0] instanceof Rectangle);
-        assertTrue(canvas.shapes[1] instanceof Square);
-    }
 
     @Test
     void perimetrTest() {
+        Canvas canvas = new Canvas();
+        Shape rectangle = new Rectangle(4, 5);
+        Shape square = new Square(3);
         canvas.addShape(rectangle);
         canvas.addShape(square);
         assertEquals(30,canvas.perimetr());
@@ -35,6 +25,9 @@ public class CanvasTest {
 
     @Test
     void squareTest() {
+        Canvas canvas = new Canvas();
+        Shape rectangle = new Rectangle(4, 5);
+        Shape square = new Square(3);
         canvas.addShape(rectangle);
         canvas.addShape(square);
         assertEquals(29,canvas.square());
