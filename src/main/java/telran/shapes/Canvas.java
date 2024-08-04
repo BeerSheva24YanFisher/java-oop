@@ -33,4 +33,15 @@ public class Canvas implements Shape{
         return totalSquare;
     }
 
+    public int count() {
+        int count = 0;
+        for (Shape shape : shapes) {
+            count++;
+            if (shape instanceof Canvas canvas) {
+                count += canvas.count();
+            }
+        }
+        return count;
+    }
+
 }

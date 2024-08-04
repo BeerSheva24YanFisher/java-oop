@@ -35,5 +35,17 @@ public class CanvasTest {
         canvas.addShape(rectangle);
         assertEquals(49,canvas.square());
     }
+
+    @Test
+    void countTest() {
+        Canvas canvas1 = new Canvas();
+        Canvas canvas2 = new Canvas();
+        Shape shape1 = new Rectangle(3, 4);
+        Shape shape2 = new Square(4);
+        canvas1.addShape(shape1);
+        canvas2.addShape(shape2);
+        canvas1.addShape(canvas2);
+        assertEquals(3, canvas1.count());
+    }
     
 }
